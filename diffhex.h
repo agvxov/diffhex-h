@@ -39,6 +39,11 @@ diffhex_options_t diffhex_defaults = {
 
 extern void diffhex(const void * buffer1, size_t size1, const void * buffer2, size_t size2, diffhex_options_t options);
 
+static inline
+void dumphex(const void * buffer, size_t size, diffhex_options_t options) {
+    diffhex(buffer, size, buffer, size, options);
+}
+
 #ifdef DIFFHEX_IMPLEMENTATION
 
 static inline
