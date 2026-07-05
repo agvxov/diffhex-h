@@ -25,7 +25,7 @@ typedef struct {
     const char * color_extra;
 } diffhex_options_t;
 
-diffhex_options_t diffhex_defaults = (diffhex_options_t) {
+diffhex_options_t diffhex_defaults = {
     .quads_per_line        = 1,
     .is_absolute_address   = false,
     .do_collapse_identical = false,
@@ -152,7 +152,7 @@ void diffhex(
                     diffhex_print_address(buffer1, offset, options);
 
                     options.print("%s [ discarded identical ]  ", options.color_match);
-                    for (int i = 0; i < options.quads_per_line-1; i++) {
+                    for (size_t i = 0; i < options.quads_per_line-1; i++) {
                         options.print("-- -- -- -- -- -- -- --  ");
                     }
                     options.print("%s", options.color_reset);
