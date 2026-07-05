@@ -1,5 +1,9 @@
 #ifndef DIFFHEX_H
 #define DIFFHEX_H
+/* Diffhex - Hex diffs and dumps of arrays in a header-only-library.
+ * This file is in the Public Domain.
+ * https://github.com/agvxov/diffhex-h
+ */
 
 #include <ctype.h>
 #include <assert.h>
