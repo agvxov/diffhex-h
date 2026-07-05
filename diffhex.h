@@ -1,6 +1,7 @@
 #ifndef DIFFHEX_H
 #define DIFFHEX_H
 
+#include <ctype.h>
 #include <assert.h>
 
 /* Printf like printing call back for all output operations.
